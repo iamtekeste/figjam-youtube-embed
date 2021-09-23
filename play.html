@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <style></style>
+  </head>
+  <body>
+    <iframe
+      id="preview"
+      width="560"
+      height="315"
+      src=""
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+    <script type="module">
+      window.addEventListener("message", ({ data }) => {
+        const { ytURL } = data.pluginMessage;
+        let url = new URL(ytURL);
+        let searchParams3 = new URLSearchParams(url.search);
+        let ytid = searchParams3.get("v");
+        document.getElementById("preview").src = `https://www.youtube.com/embed/${ytid}`;
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "name": "YouTube Embed",
+  "id": "20074075004744806012",
+  "api": "1.0.0",
+  "editorType": ["figjam"],
+  "containsWidget": true,
+  "main": "code.js",
+  "ui": {
+    "playVideo": "play.html",
+    "addVideo": "add-video.html"
+  }
+}

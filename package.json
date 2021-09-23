@@ -1,0 +1,20 @@
+{
+  "name": "Notepad",
+  "version": "1.0.0",
+  "description": "Sample Widget that uses an iframe",
+  "main": "code.js",
+  "scripts": {
+    "zip": "mkdir -p out && npm run build && zip -r out/WidgetNotepad.zip . -x node_modules/\\* -x .\\* -x out/\\* -x plugin-typings/*.zip plugin-typings/.\\*",
+    "build": "tsc",
+    "build:watch": "tsc --watch"
+  },
+  "author": "Figma",
+  "license": "MIT License",
+  "dependencies": {
+    "@figma/plugin-typings": "file:plugin-typings",
+    "nanoid": "^3.1.25",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "typescript": "^4.3.5"
+  }
+}
